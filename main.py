@@ -7,7 +7,7 @@ def Chiffre_cesar(texte, decalage):
 
     return message_chiffre
 
-test = "Bonjour, je suis un test."
+test = "ne dors pas ."
 decalage = 3
 resultat = Chiffre_cesar(test, decalage)
 print("Texte original :", test)
