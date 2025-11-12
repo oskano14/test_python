@@ -29,23 +29,23 @@ def vigenere_cipher(text, password):
 	for index, char in enumerate(text):
 		current_key = list_of_keys[index % len(list_of_keys)]
 		crypted_text.append(cesar_cipher(char, current_key))
-		return "".join(crypted_text)
+	return "".join(crypted_text)
 	
+test = "Bonjour, je suis un test."
 
-
-print(vigenere_cipher("Bonjour, je suis un test.", "clef"))
+print(vigenere_cipher(test, "clefsecrete"))
 
 
 def vigere_uncipher(crypted_text, password):
-   list_of_keys = [ord(char) for char in password]
-   uncrypted_text = []
-   for index, char in enumerate(crypted_text):
-	   current_key = list_of_keys[index % len(list_of_keys)]
-	   uncrypted_text.append(cesar_uncipher(char, current_key))
-	   return "".join(uncrypted_text)
+    list_of_keys = [ord(char) for char in password]
+    uncrypted_text = []
+    for index, char in enumerate(crypted_text):
+        current_key = list_of_keys[index % len(list_of_keys)]
+        uncrypted_text.append(cesar_uncipher(char, current_key))
+    return "".join(uncrypted_text)
 
   
-
+print(vigere_uncipher(vigenere_cipher(test, "clefsecrete"), "clefsecrete"))
 
 
 
